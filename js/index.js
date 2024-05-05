@@ -4,7 +4,7 @@ import animations from "./animation.js";
 
 /* Redirecting */
 document.getElementById("registrationButton").addEventListener("click", function() {
-window.location.href = "src/landingPage.html";
+window.location.href = "src/landingPage/dist/index.html";
 });
 
 animations.boxAnimation.play();
