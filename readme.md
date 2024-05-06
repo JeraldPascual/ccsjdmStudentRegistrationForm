@@ -1,7 +1,15 @@
 # CCSJDM Student Registration Form App Documentation
 
+
+
 ## Overview
 The Registration App is a web application designed to facilitate CCSJDM student registration for educational institutions. It allows students to fill out a registration form with their personal details and submit the information securely. The application is built using HTML, CSS, JavaScript, and integrates with Firebase for data storage.
+
+### Description
+
+This application utilizes the POST method for form submissions. When a user fills out the registration form and submits it, the data is sent to the Firebase Realtime Database using the POST method. This method is used to send data to the server to create or update a resource, in this case, registering a new student.
+
+--- 
 
 ## Features
 - **Student Registration Form**: Users can fill out a comprehensive form with their personal details including name, contact information, address, and more.
