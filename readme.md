@@ -38,7 +38,7 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 5. Submit a pull request.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://github.com/JeraldPascual/ccsjdmStudentRegistrationForm/blob/main/LICENSE.txt).
 
 ## Contact
 For questions or support, please contact [Jerald Pascual on Facebook](mailto: jpascual.ccsjdmshs@gmail.com).
