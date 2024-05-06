@@ -41,4 +41,4 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
-For questions or support, please contact [Your Name](mailto: jpascual.ccsjdmshs@gmail.com).
+For questions or support, please contact [Jerald Pascual on Facebook](mailto: jpascual.ccsjdmshs@gmail.com).
