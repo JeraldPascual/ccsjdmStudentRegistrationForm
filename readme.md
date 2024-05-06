@@ -9,6 +9,9 @@ The Registration App is a web application designed to facilitate CCSJDM student 
 
 This application utilizes the POST method for form submissions. When a user fills out the registration form and submits it, the data is sent to the Firebase Realtime Database using the POST method. This method is used to send data to the server to create or update a resource, in this case, registering a new student.
 
+<img src="https://github.com/JeraldPascual/ccsjdmStudentRegistrationForm/blob/d45f25e1fdaeeb09b997bd0599a737902824b613/firebaseDesc.png" alt="firebaseDesc">
+
+
 --- 
 
 ## Features
