@@ -18,7 +18,7 @@ This application utilizes the POST method for form submissions. When a user fill
 - **Student Registration Form**: Users can fill out a comprehensive form with their personal details including name, contact information, address, and more.
 - **Dynamic Form Fields**: The form dynamically adjusts based on the user's selection of the program applying for (college or senior high school).
 - **Firebase Integration**: User registration data is securely stored in Firebase Realtime Database.
-- **File Upload**: Users can optionally upload proof of disability, which is stored in Firebase Storage.
+- **File Upload**: Users can upload 2x2 picture and proof of disability, which is stored in Firebase Storage.
 - **Success Message**: Upon successful registration, users receive a confirmation message.
 
 ## Installation
