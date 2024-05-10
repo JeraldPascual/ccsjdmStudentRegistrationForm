@@ -5,7 +5,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 30px;
+    width: 20px;
     background: hsl(215, 20.2%, 65.1%);
 }
 ::-webkit-scrollbar-track {
