@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CCSJDM Registration Form">
+
+    <meta name="keywords" content="CCSJDM, Registration, Form">
+
+    <meta name="Author" content="Jerald Pascual">
+
+        <title>CCSJDM - Registration Form</title>
+        <link rel="icon" href="schoolLogo.png" type="image/x-icon" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css"
+            rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <style>
+           
+            .hidden {
+                display: none;
+            }
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: hsl(215, 20.2%, 65.1%);
+}
+::-webkit-scrollbar-track {
+    width: 5px;
+    color: hsl(217, 32.6%, 17.5%);
+    background: hsl(217, 32.6%, 17.5%);
+}
+
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: hsl(327, 87.1%, 81.8%);
+}
+
+
+            #successMessage {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                z-index: 999;
+                cursor: pointer;
+            }
+
+            #successMessage p {
+                color: #ff0066; /* Pink accent color */
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100 gap-6">
+        <!-- Preloader -->
+        <div
+            id="preloader"
+            class="flex justify-center items-center h-screen fixed top-0 left-0 w-full bg-white z-50">
+            <div
+                class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"></div>
+        </div>
+
+        <div class="container mx-auto p-4 bg-white shadow-md rounded-lg ">
+    
+            <h1 class=" inline text-3xl font-bold text-pink-500 mb-4">
+                Student Registration Form
+            </h1>
+            <form id="registrationForm">
+                <div class="mb-8 mt-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">APPLICATION FOR ADMISSION</h2>
+                    <p class="text-base text-gray-600 mb-4">
+                        Instructions:
+                        <br />
+                        1. Student-Applicant must fill out this form correctly.
+                        <br />
+                        2. Type or Print all the necessary information. If not applicable, please write "N/A".
+                        <br />
+                        3. Submit required documents upon completion to the Admissions Office.
+                    </p>
+                </div>
+        
+<div id="studentPictureDiv" class="my-2.5">
+    <label for="studentPicture" class="block font-bold mb-2">2x2 PICTURE OR PASSPORT SIZE:</label>
+    <input type="file" id="studentPicture" accept="image/*" class="w-full mb-4" />
+</div>
+
+                <div class="mb-4">
+                    <label for="program" class="block font-bold mb-2"
+                        >Program Applying For:</label
+                    >
+                    <div>
+                        <input
+                            type="radio"
+                            id="programCollege"
+                            name="program"
+                            value="college"
+                            required
+                            class="mr-2" />
+                        <label for="programCollege" class="mr-4">College</label>
+                        <input
+                            type="radio"
+                            id="programSHS"
+                            name="program"
+                            value="shs"
+                            required
+                            class="mr-2" />
+                        <label for="programSHS">Senior High School</label>
+                    </div>
+                </div>
+
+                <div id="collegeCourses" class="hidden">
+                    <label for="collegeCourse" class="block font-bold mb-2"
+                        >College Course:</label
+                    >
+                    <select id="collegeCourse" required class="w-full mb-4">
+                        <option value="BSCRIM">BSCRIM</option>
+                        <option value="BPA">BPA</option>
+                        <option value="BSSW">BSSW</option>
+                        <option value="BPEd">BPEd</option>
+                        <option value="BECEd">BECEd</option>
+                        <option value="BS Psych">BS Psych</option>
+                        <option value="BSEMC">BSEMC</option>
+                        <option value="BS Entrep">BS Entrep</option>
+                        <option value="BSMA">BSMA</option>
+                        <option value="BSIA">BSIA</option>
+                        <option value="BSTM">BSTM</option>
+                    </select>
+                </div>
+
+                <div id="shsStrands" class="hidden">
+                    <label for="shsStrand" class="block font-bold mb-2"
+                        >SHS Strand:</label
+                    >
+                    <select id="shsStrand" required class="w-full mb-4">
+                        <option value="HUMSS">HUMSS</option>
+                        <option value="TVL-ICT">TVL-ICT</option>
+                        <option value="ABM">ABM</option>
+                        <option value="GAS">GAS</option>
+                    </select>
+                </div>
+
+                <label for="lastName" class="block font-bold mb-2"
+                    >Last Name:</label
+                >
+                <input type="text" id="lastName" required class="w-full mb-4" />
+                <!-- Add other form fields here -->
+
+                <label for="firstName" class="block font-bold mb-2"
+                    >First Name:</label
+                >
+                <input
+                    type="text"
+                    id="firstName"
+                    required
+                    class="w-full mb-4" />
+                <label for="middleName" class="block font-bold mb-2"
+                    >Middle Name:</label
+                >
+                <input
+                    type="text"
+                    id="middleName"
+                    required
+                    class="w-full mb-4" />
+
+                <label for="lrn" class="block font-bold mb-2">LRN:</label>
+                <input type="number" id="lrn" required class="w-full mb-4" maxlength="12" />
+
+                <label for="phoneNumber" class="block font-bold mb-2"
+                    >Phone Number:</label
+                >
+                <input
+                    type="tel"
+                    id="phoneNumber"
+                    required
+                    class="w-full mb-4" maxlength="11" />
+
+                <label for="emailAddress" class="block font-bold mb-2"
+                    >Email Address:</label
+                >
+                <input
+                    type="email"
+                    id="emailAddress"
+                    required
+                    class="w-full mb-4" />
+
+                <label for="dob" class="block font-bold mb-2"
+                    >Date of Birth:</label
+                >
+                <input type="date" id="dob" required class="w-full mb-4" />
+
+                <label for="age" class="block font-bold mb-2">Age:</label>
+                <input type="number" id="age" required class="w-full mb-4" />
+
+                <label for="sexAtBirth" class="block font-bold mb-2"
+                    >Sex at Birth:</label
+                >
+                <select id="sexAtBirth" required class="w-full mb-4">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="civilStatus" class="block font-bold mb-2"
+                    >Civil Status:</label
+                >
+                <select id="civilStatus" required class="w-full mb-4">
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="widowed">Widowed</option>
+                </select>
+
+                <label for="houseNoStreetBarangay" class="block font-bold mb-2"
+                    >House No./Street/Barangay:</label
+                >
+                <input
+                    type="text"
+                    id="houseNoStreetBarangay"
+                    required
+                    class="w-full mb-4" />
+
+                <label for="townMunicipality" class="block font-bold mb-2"
+                    >Town/Municipality:</label
+                >
+                <input
+                    type="text"
+                    id="townMunicipality"
+                    required
+                    class="w-full mb-4" />
+
+                <label for="province" class="block font-bold mb-2"
+                    >Province:</label
+                >
+                <input type="text" id="province" required class="w-full mb-4" />
+
+                <label for="district" class="block font-bold mb-2"
+                    >District:</label
+                >
+                <input type="text" id="district" required class="w-full mb-4" />
+
+                <label for="region" class="block font-bold mb-2">Region:</label>
+                <input type="text" id="region" required class="w-full mb-4" />
+
+                <div id="disabilityQuestionDiv" class="mb-4">
+                    <label for="disabilityQuestion" class="block font-bold mb-2"
+                        >Do you have a disability?</label
+                    >
+                    <input
+                        type="radio"
+                        id="yesDisability"
+                        name="disability"
+                        value="yes"
+                        class="mr-2" />
+                    <label for="yesDisability" class="mr-4">Yes</label>
+                    <input
+                        type="radio"
+                        id="noDisability"
+                        name="disability"
+                        value="no"
+                        class="mr-2" />
+                    <label for="noDisability">No</label>
+                </div>
+
+                <div id="disabilityProofDiv" class="hidden">
+                    <label for="disabilityProof" class="block font-bold mb-2"
+                        >Proof of Disability:</label
+                    >
+                    <input
+                        type="file"
+                        id="disabilityProof"
+                        accept="image/*"
+                        class="w-full mb-4" />
+                </div>
+
+               
+<button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded mt-4 hover:bg-blue-500 transition duration-300">
+    Submit
+</button>
+
+            </form>
+            <div id="successMessage" class="hidden">
+                <p>Registration successful!</p>
+            </div>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+        <script>
+            // GSAP animation for preloader JP
+
+            gsap.to("#preloader", {
+                duration: 1,
+                opacity: 0,
+                ease: "power1.inOut",
+                onComplete: hidePreloader
+            });
+
+            function hidePreloader() {
+                document.getElementById("preloader").style.display = "none";
+            }
+
+            // Initialize Firebase of enroll app
+            const firebaseConfig = {
+              ...
+            };
+
+            firebase.initializeApp(firebaseConfig);
+            const database = firebase.database();
+            const storage = firebase.storage();
+
+            // Register form submission
+            const registrationForm =
+                document.getElementById("registrationForm");
+            const successMessage = document.getElementById("successMessage");
+            
+                        // Animate the success message modal
+            gsap.from(successMessage, {
+                duration: 0.5,
+                y: -50,
+                opacity: 0,
+                ease: "power2.out",
+                onComplete: () => {
+                    // Make the success message clickable to close
+                    successMessage.addEventListener("click", () => {
+                        gsap.to(successMessage, {
+                            duration: 0.3,
+                            opacity: 0,
+                            y: -50,
+                            ease: "power2.in",
+                            onComplete: () => {
+                                successMessage.classList.add("hidden");
+                            }
+                        });
+                    });
+                }
+            });
+
+            const programRadioButtons = document.querySelectorAll(
+                'input[name="program"]'
+            );
+            const collegeCoursesDiv = document.getElementById("collegeCourses");
+            const shsStrandsDiv = document.getElementById("shsStrands");
+
+            programRadioButtons.forEach(radioButton => {
+                radioButton.addEventListener("change", () => {
+                    if (radioButton.value === "college") {
+                        collegeCoursesDiv.classList.remove("hidden");
+                        shsStrandsDiv.classList.add("hidden");
+                    } else if (radioButton.value === "shs") {
+                        shsStrandsDiv.classList.remove("hidden");
+                        collegeCoursesDiv.classList.add("hidden");
+                    }
+                });
+            });
+
+            registrationForm.addEventListener("submit", async e => {
+                e.preventDefault();
+
+                const program = document.querySelector(
+                    'input[name="program"]:checked'
+                ).value;
+                let course = "";
+                let shsStrand = "";
+
+                if (program === "college") {
+                    course = document.getElementById("collegeCourse").value;
+                } else if (program === "shs") {
+                    shsStrand = document.getElementById("shsStrand").value;
+                }
+
+                const lastName = document.getElementById("lastName").value;
+                const firstName = document.getElementById("firstName").value;
+                const middleName = document.getElementById("middleName").value;
+                const lrn = document.getElementById("lrn").value;
+                const phoneNumber =
+                    document.getElementById("phoneNumber").value;
+                const emailAddress =
+                    document.getElementById("emailAddress").value;
+                const dob = document.getElementById("dob").value;
+                const age = document.getElementById("age").value;
+                const sexAtBirth = document.getElementById("sexAtBirth").value;
+                const civilStatus =
+                    document.getElementById("civilStatus").value;
+                const houseNoStreetBarangay = document.getElementById(
+                    "houseNoStreetBarangay"
+                ).value;
+                const townMunicipality =
+                    document.getElementById("townMunicipality").value;
+                const province = document.getElementById("province").value;
+                const district = document.getElementById("district").value;
+                const region = document.getElementById("region").value;
+
+                // Disability proof
+                let disabilityProofURL = "";
+                const disabilityProof =
+                    document.getElementById("disabilityProof").files[0];
+                if (disabilityProof) {
+                    const storageRef = storage.ref(
+                        `disabilityProofs/${disabilityProof.name}`
+                    );
+                    await storageRef.put(disabilityProof);
+                    disabilityProofURL = await storageRef.getDownloadURL();
+                }
+
+                let studentPictureURL = "";
+                const studentPicture = document.getElementById("studentPicture").files[0];
+                if (studentPicture) {
+                    const storageRef = storage.ref(`studentPictures/${studentPicture.name}`);
+                    await storageRef.put(studentPicture);
+                    studentPictureURL = await storageRef.getDownloadURL();
+                }
+
+                const formData = {
+                    program,
+                    course,
+                    shsStrand,
+                    lastName,
+                    firstName,
+                    middleName,
+                    lrn,
+                    phoneNumber,
+                    emailAddress,
+                    dob,
+                    age,
+                    sexAtBirth,
+                    civilStatus,
+                    houseNoStreetBarangay,
+                    townMunicipality,
+                    province,
+                    district,
+                    region,
+                    disabilityProofURL,
+                    studentPictureURL
+                };
+
+                try {
+                    // Save user registration data to Realtime Database
+                    const newRegistrationRef = database
+                        .ref("registrations")
+                        .push();
+                    await newRegistrationRef.set(formData);
+
+                    // Show success message
+                    successMessage.classList.remove("hidden");
+
+                    // Clear form fields
+                    registrationForm.reset();
+                } catch (error) {
+                    console.error("Error registering user:", error);
+                }
+            });
+
+      
+            const disabilityQuestionDiv = document.getElementById(
+                "disabilityQuestionDiv"
+            );
+            const disabilityProofDiv =
+                document.getElementById("disabilityProofDiv");
+
+            disabilityQuestionDiv.addEventListener("change", () => {
+                const yesDisability = document.getElementById("yesDisability");
+                if (yesDisability.checked) {
+                    disabilityProofDiv.classList.remove("hidden");
+                } else {
+                    disabilityProofDiv.classList.add("hidden");
+                }
+            });
+
+
+        </script>
+    </body>
+</html>
