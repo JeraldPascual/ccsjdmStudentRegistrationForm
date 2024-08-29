@@ -1,6 +1,6 @@
 # CCSJDM Student Registration Form App Documentation
 
-https://jeraldpascual.github.io/ccsjdmStudentRegistrationForm/
+https://ccsjdmstudentportal.netlify.app
 
 ## Overview
 The Registration App is a web application designed to facilitate CCSJDM student registration for educational institutions. It allows students to fill out a registration form with their personal details and submit the information securely. The application is built using HTML, CSS, JavaScript, and integrates with Firebase for data storage.
